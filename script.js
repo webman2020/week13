@@ -52,7 +52,7 @@ function SaveCookie() {
 
 	//	keeps for a year
 	date.setTime(date.getTime() + Number(365) * 3600 * 1000);
-	document.cookie = "DunmireShopList" + "=" + escape(ShoppingList.join(",")) + "; path=/week13/;expires = " + date.toGMTString();
+	document.cookie = "DunmireShopList" + "=" + escape(ShoppingList.join(",")) + "; path=/;expires = " + date.toGMTString();
 }
 
 
