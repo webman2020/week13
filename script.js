@@ -46,7 +46,7 @@ function SaveCookie() {
 
 	//	keeps for a year
 	date.setTime(date.getTime() + Number(365) * 3600 * 1000);
-	document.cookie = "DunmireShopList" + "=" + escape(ShoppingList.join(",")) + "; path=/;expires = " + date.toGMTString();
+	document.cookie = "DunmireShopList" + "=" + escape(ShoppingList.join(",")) + "; path=/week13/;expires = " + date.toGMTString();
 }
 
 
@@ -57,10 +57,8 @@ function ReadCookie(Name) {
 	var ca = document.cookie.split(";");
 	for(var i = 0; i < ca.length; i++) {
 		var c = ca[i];
-		while (c.charAt(0)==" ") {
-			c = c.substring(1, c.length);
-			if (c.indexOf(NameEQ) == 0) { return c.substring(NameEQ.length, c.length); }
-		}
+		while (c.charAt(0)==" ") { c = c.substring(1, c.length); }
+		if (c.indexOf(NameEQ) == 0) { return c.substring(NameEQ.length, c.length); }
 	}
 	return null;
 }
