@@ -47,7 +47,7 @@ label	{ float:right; padding-right: 5px; /*	text-indent: 5px; */	}
 
 /* —————————	FORM STYLES	*/
 
-input#Item	{ margin-bottom: 0; }
+input#Item	{ margin-bottom: 0; width: 200px; }
 input#remove	{ float: left; margin-top: 2px; /*	margin-bottom: 10px; */	margin-right: 10px; 
 		background-color: #c57; color: #fff; }
 input#adds	{ float: right; margin-top: 5px; /*	margin-bottom: 10px; margin-right: 20px; */	
