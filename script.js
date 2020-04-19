@@ -17,7 +17,7 @@ function WhenLoad()	{
 	//	v4.0 save cookie
 	//	v4.0 read cookie when page loads and displays
 
-	alert("Welcome to 'Shopping List' App!\n\nCreated by Rock Valley College\n**Javascript(Web233) Students**\n\nQuestions?\nemail Professor Chuck Konkol\nc.konkol@rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu\n\n");
+	About();
 	PopulateShoppingListonload();
 	DisplayShoppingLists();
 	ttt = setTimeout("ClearFocus()", 1500);
@@ -25,6 +25,12 @@ function WhenLoad()	{
 
 
 // ——————————————————————————————————————————————————————
+// CLICKING ABOUT BUTTON LAUNCHES ALERT ABOUT APP
+
+function About() {
+	alert("Welcome to the \"Shopping List\" App!\n\nCreated by: Curt Dunmire\n**Javascript (Web233) Student**\n\nQuestions?\nemail Professor Chuck Konkol\nc.konkol@rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu\n\n");
+}
+
 
 var MyItems = {
 	Name:"", Price:""
