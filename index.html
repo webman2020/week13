@@ -5,13 +5,13 @@
 Curt Dunmire
 Spring 2020
 Web233 Javascript
-Date: 04/12/20
-Assignment #12
+Date: 04/18/20
+Assignment #13
 
 -->
 <head>
 <meta charset="UTF-8">
-<title>Week 12: Web233 Assignment, Shopping List App, Version 4.0 • Curt Dunmire</title>
+<title>Week 13: Web233 Assignment, Shopping List App • Curt Dunmire</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="shopping cart">
@@ -24,12 +24,13 @@ Assignment #12
 <body>
 
 <div id="Wrapper">
-<h1>Shopping List App, Version 4.0</h1>
+<h1>Shopping List App</h1>
 
-<form>
-<span class="InputName">Name:</span><input type="text" id="Item" name="Item" /><br><br>
-<span class="InputCost">Cost:</span><input type="text" id="Cost" name="Cost" />
-<input class="button" name="submit" type="button" value="+Add" onclick="AddShoppingList(Item.value, Cost.value)" />
+<form onsubmit="return false;">
+<span class="InputName">Item:</span><input type="text" id="Item" name="Item" 
+onkeydown="if (event.keyCode == 13) { AddShoppingList(Item.value); }" 
+maxlength="18" placeholder="enter item < 19 characters" />
+<input class="button" name="submit" id="BtnSubmit" type="button" value="+Add" onclick="AddShoppingList(Item.value)" />
 </form>
 
 <p id="MyList"></p>
@@ -37,8 +38,8 @@ Assignment #12
 
 <p class="DateControl"><span class="DateControl2" id="Date"></span></p>
 
-<footer><span class="NoBr">Week 12: Web233 Assignment</span> <span class="SqBull">&#9724;</span>
-<span class="NoBr">Assignment #12, Shopping List App v4.0</span>
+<footer><span class="NoBr">Week 13: Web233 Assignment</span> <span class="SqBull">&#9724;</span>
+<span class="NoBr">Assignment #13, Shopping List App</span>
 <br class="FootBrk"><span class="NoBr">Curt Dunmire</span></footer>
 </div>
 

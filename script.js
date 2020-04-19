@@ -2,8 +2,8 @@
 // Curt Dunmire
 // Spring 2020
 // Web233 Javascript
-// Date: 04/12/20
-// Assignment #12
+// Date: 04/18/20
+// Assignment #13
 
 
 
@@ -17,8 +17,10 @@ function WhenLoad()	{
 	//	v4.0 save cookie
 	//	v4.0 read cookie when page loads and displays
 
+	alert("Welcome to 'Shopping List' App!\n\nCreated by Rock Valley College\n**Javascript(Web233) Students**\n\nQuestions?\nemail Professor Chuck Konkol\nc.konkol@rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu\n\n");
 	PopulateShoppingListonload();
 	DisplayShoppingLists();
+	ttt = setTimeout("ClearFocus()", 1000);
 }
 
 
@@ -186,7 +188,7 @@ function AddToShopCart(Item, Num) {
 
 // —————————	v3.1 Update function AddShoppingList by adding objects
 
-function AddShoppingList(Item, Cost) {
+function AddShoppingList(Item) {
 	//	Checks for empty values or just whitespaces (no alphanumeric characters)
 	//	If no alphanumeric characters are entered, item is not added and alert is shown.
 
@@ -194,6 +196,7 @@ function AddShoppingList(Item, Cost) {
 
 	if (Item.length == 0 || CheckWhiteSpace.test(Item)) {
 		alert("You did not add a valid item.\nItem not added to list.\nPlease try again.\n\n");
+		clearFocus();
 		return false;
 	} else {
 		//	Replace functions remove extra unneeded whitespaces in added shopping list item
@@ -201,6 +204,7 @@ function AddShoppingList(Item, Cost) {
 		Item = Item.replace(/\s{2,}/g, " ");
 	}
 
+/*
 	if (Cost.length == 0 || CheckWhiteSpace.test(Cost)) {
 		alert("You did not add a valid cost.\nCost not added to list.\nPlease try again.\n\n");
 		return false;
@@ -209,33 +213,10 @@ function AddShoppingList(Item, Cost) {
 		Cost = Cost.replace(/^\s+|\s+$/g, "");
 		Cost = Cost.replace(/\s{2,}/g, " ");
 	}
-
-	//v 3.0 declare variable for Groc string
-	var Groc = "";
-
-	//v 3.0 v 3.0 declare variable for loop count
-	var count = 0;
-
-	//v 3.0 edit value for MyItems.Name
-	MyItems.Name = Item;
-
-	//v 3.0 edit value for MyItems.Cost
-	MyItems.price = Cost;
-
-	//v 3.0 for loop through object propterties and 
-	for (var x in MyItems) {
-		if (count === 1) { Groc += "$"; }
-
-		//add to Groc string from object array item
-		Groc += MyItems[x];
-		if (count === 0) { Groc += " | "; }
-
-		//increment count by 1
-		count++;
-	}
+*/
 
 	//	push to shoppinglist
-	ShoppingList.push(Groc);
+	ShoppingList.push(Item);
 
 	//	display shoppinglist
 	DisplayShoppingLists();
@@ -251,7 +232,7 @@ function AddShoppingList(Item, Cost) {
 
 function ClearFocus() {
 	document.getElementById("Item").value = "";
-	document.getElementById("Cost").value = "";
+	//	document.getElementById("Cost").value = "";
 	document.getElementById("Item").focus();
 }
 
@@ -272,7 +253,7 @@ function DisplayShoppingLists() {
 		var Arrays = ShoppingList[i];
 		Arrays = "'" + Arrays + "'";
 
-		var BtnAddcart = '<label><input name="add" type="checkbox" id="adds" value="Add to Shopping Cart" onclick="AddToShopCart(' + Arrays + ',' + i + ')" />Add</label>';
+		var BtnAddcart = '<input name="add" type="checkbox" id="adds" value="Add to Shopping Cart" onclick="AddToShopCart(' + Arrays + ',' + i + ')" />';
 		TheRow = "<li>" + ShoppingList[i] + BtnDelete + " " + BtnAddcart + "</li>";
 		TheList += TheRow;
 	}
@@ -305,14 +286,14 @@ function DisplayShoppingCart() {
 		Arrays = "'" + Arrays + "'";
 
 		//	v3.1 add edit button using below i index & name it btnpdate
-		var btnaddlist = '<label><input name="add" type="checkbox" id="adds" value="Add to Shopping List" onclick="AddBackToShoppingList(' + Arrays + ',' + i + ')" checked="checked"/>Add</label>';
-		TheRow = "<li>" + AddToCart[i] + BtnDelete + " " + btnaddlist + "<br></li>";
+		var btnaddlist = '<input name="add" type="checkbox" id="adds" value="Add to Shopping List" onclick="AddBackToShoppingList(' + Arrays + ',' + i + ')" checked="checked"/>';
+		TheRow = "<li>" + AddToCart[i] + BtnDelete + " " + btnaddlist + "</li>";
 		TheList += TheRow;
 	}
 
 	if (ArrayLength > 0) {
 		MyCart.style.paddingTop = "20px";
-		document.getElementById("MyCart").innerHTML = "Items in Shopping Cart:<br><ul>" + TheList + "</ul>";
+		document.getElementById("MyCart").innerHTML = "Items Purchased:<ul>" + TheList + "</ul>";
 	} else {
 		MyCart.style.paddingTop = "0";
 		document.getElementById("MyCart").innerHTML = "";
@@ -342,6 +323,7 @@ function DeleteShoppingCart(Position) {
 	//	v4.0 save cookie
 	SaveCookie();
 }
+
 
 
 

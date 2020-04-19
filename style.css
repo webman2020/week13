@@ -3,8 +3,8 @@
 Curt Dunmire
 Spring 2020
 Web233 Javascript
-Date: 04/12/20
-Assignment #12
+Date: 04/18/20
+Assignment #13
 
 */
 
@@ -47,7 +47,7 @@ label	{ float:right; padding-right: 5px; /*	text-indent: 5px; */	}
 
 /* —————————	FORM STYLES	*/
 
-input#item	{ float: left; margin-bottom: 10px; }
+input#Item	{ margin-bottom: 0; }
 input#remove	{ float: left; margin-top: 2px; /*	margin-bottom: 10px; */	margin-right: 10px; 
 		background-color: #c57; color: #fff; }
 input#adds	{ float: right; margin-top: 5px; /*	margin-bottom: 10px; margin-right: 20px; */	
