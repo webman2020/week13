@@ -193,8 +193,8 @@ function AddShoppingList(Item) {
 	var CheckWhiteSpace = new RegExp(/^\s+$/);
 
 	if (Item.length == 0 || CheckWhiteSpace.test(Item)) {
-		clearFocus();
 		alert("You did not add a valid item.\nItem not added to list.\nPlease try again.\n\n");
+		ClearFocus();
 		return false;
 	} else {
 		//	Replace functions remove extra unneeded whitespaces in added shopping list item
