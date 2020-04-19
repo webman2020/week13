@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+Curt Dunmire
+Spring 2020
+Web233 Javascript
+Date: 04/12/20
+Assignment #12
+
+-->
+<head>
+<meta charset="UTF-8">
+<title>Week 12: Web233 Assignment, Shopping List App, Version 4.0 • Curt Dunmire</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="shopping cart">
+<meta name="author" content="Curt Dunmire">
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<div id="Wrapper">
+<h1>Shopping List App, Version 4.0</h1>
+
+<form>
+<span class="InputName">Name:</span><input type="text" id="Item" name="Item" /><br><br>
+<span class="InputCost">Cost:</span><input type="text" id="Cost" name="Cost" />
+<input class="button" name="submit" type="button" value="+Add" onclick="AddShoppingList(Item.value, Cost.value)" />
+</form>
+
+<p id="MyList"></p>
+<p id="MyCart"></p>
+
+<p class="DateControl"><span class="DateControl2" id="Date"></span></p>
+
+<footer><span class="NoBr">Week 12: Web233 Assignment</span> <span class="SqBull">&#9724;</span>
+<span class="NoBr">Assignment #12, Shopping List App v4.0</span>
+<br class="FootBrk"><span class="NoBr">Curt Dunmire</span></footer>
+</div>
+
+</body>
+</html>
+

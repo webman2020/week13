@@ -1,0 +1,88 @@
+/*
+
+Curt Dunmire
+Spring 2020
+Web233 Javascript
+Date: 04/12/20
+Assignment #12
+
+*/
+
+
+/* —————————	GENERAL PAGE STYLES	*/
+
+body		{ font-family: arial; background-color: #fff5ef; }
+footer		{ font-size: 9pt; color: #444; text-align: center; border-radius: 10px; margin: 30px 0 10px 0;
+		padding: 5px; background-color: #eee; }
+h1		{ color: #339; margin: 10px 0 30px 0; text-align: center; }
+
+.Hilite		{ color: #c33; }
+.Hilite2	{ color: #383; }
+.NoBr		{ white-space: nowrap; }
+.SqBull		{ padding: 0 8px 0 8px; color: #77c; }
+.FootBrk	{ display: none; }
+.DateControl	{ margin: 40px 0 40px; }
+.DateControl2	{ border-radius: 10px; background-color: #fffaf0; border: 1px solid #fff0e0; padding: 3px 10px; }
+.InputName	{ padding-right: 7px; }
+.InputCost	{ padding-right: 17px; }
+
+
+/* —————————	ADDED ITEMS STYLES	*/
+
+/*
+#MyList			{ width: 451px; clear: both; margin: 30px 0; background-color: #f5f5ff; }
+*/
+
+.AddedItemContainer	{ width: 210px; float: left; text-align: right; padding-right: 10px; }
+.RemovalButtonContainer	{ width: 130px; float: right; }
+.DividerLine		{ width: 451px; height: 2px; border-bottom: 1px solid #77f; margin-bottom: 2px; clear: both; }
+.EndItems		{ clear: both; height: 3px; }
+
+label	{ float:right; padding-right: 5px; /*	text-indent: 5px; */	}
+
+#Wrapper	{ width: 500px; margin: 20px auto; padding: 20px; border-radius: 10px 10px;
+		box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 0 10px rgba(10, 10, 10, .5);
+		border: 1px solid #6f212f; background-color: #fff; }
+
+
+/* —————————	FORM STYLES	*/
+
+input#item	{ float: left; margin-bottom: 10px; }
+input#remove	{ float: left; margin-top: 2px; /*	margin-bottom: 10px; */	margin-right: 10px; 
+		background-color: #c57; color: #fff; }
+input#adds	{ float: right; margin-top: 5px; /*	margin-bottom: 10px; margin-right: 20px; */	
+		background-color: #c57; color: #fff; }
+
+input[type=checkbox]	{ vertical-align: right; margin: 0 5px; }
+input[type=button]	{ vertical-align: middle; margin: 0 10px; background-color: #ced; padding: 2px 10px;
+			border-radius: 8px; font-size: 9pt; border-width: 1px; }
+
+ul	{ list-style-type: none; list-style-position: outside; margin: 10px 0px; padding: 0; clear: both; }
+li	{ background: #fafafa; margin: 5px 0px; line-height: 1.6; padding: 5px; border: #aaa solid 1px; border-radius: 10px; }
+
+li:nth-child(odd)	{ background: #dde; }
+
+li a	{ font-size: 10pt; }
+
+form a	{ border-radius: 6px; cursor: pointer; float:right; font: 10pt; margin: 0; margin-top: 2px; outline: medium none;
+	overflow: visible; height:17px; padding: 5px 5px 0 5px; white-space: nowrap; background-color: #285;
+	background-image: -moz-linear-gradient(center top, #4bc380, #2e8b57); border: 1px solid #153; color: #fff; }
+
+form a:hover	{ background-color: #71D09B; background-image: -moz-linear-gradient(center top, #71D09B, #2E8B57);
+		border: 1px solid #1D5837; color: #fff; text-shadow: 0 -1px 0 #1D5837; }
+form a:active	{ border-color: #1D5837; color: #fff; text-shadow: none; }
+form a.delete	{ background-color: #CD0000; background-image: -moz-linear-gradient(center top, #FF2323, #CD0000);
+		border: 1px solid #890000; color: #fff; text-shadow: 0 -1px 0 #890000; margin-top: 0px; height: 17px; }
+
+form a.delete:hover	{ background-color: #FF5656; background-image: -moz-linear-gradient(center top, #FF5656, #CD0000);
+			border: 1px solid #800; color: #fff; text-shadow: 0 -1px 0 #800; }
+form a.delete:active	{ border-color: #800; color: #fff; text-shadow: none; }
+
+
+/* —————————	SCREEN WIDTH PAGE STYLES	*/
+
+@media only screen and (max-width: 29.6em) {
+	.FootBrk	{ display: inline; }
+	.ShowHide	{ display: none; }
+}
+
